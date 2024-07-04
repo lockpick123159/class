@@ -1,5 +1,7 @@
+#include <cmath>
 #include "Smiley.h"
 #include "Circle.h"
+#include <algorithm>
 
 void Smiley::draw() const
 {
@@ -9,4 +11,8 @@ void Smiley::draw() const
 	mouth->draw();
 }
 
-/* void Smiley::rotate(int rad); */
+void Smiley::rotate(int rad)
+{
+	for_each(eyes.cbegin(), eyes.cend(), [=](Shape* eye){eye->rotate(rad);} );
+	mouth->rotate(rad);
+}

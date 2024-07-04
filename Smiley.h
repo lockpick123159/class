@@ -14,7 +14,7 @@ public:
 	void move(Point to) override {}
 	
 	void draw() const override;
-	void rotate(int) override {}
+	void rotate(int) override;
 
 	void add_eye(Shape* s)
 	{

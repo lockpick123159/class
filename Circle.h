@@ -15,7 +15,7 @@ public:
 	}
 
 	void draw() const override;
-	void rotate(int) override {}
+	void rotate(int) override;
 private:
 	Point x;
 	int r;
